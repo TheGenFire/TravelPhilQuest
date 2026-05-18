@@ -115,17 +115,97 @@ export default function Quests({ user }) {
         )}
 
         {tab === 'rewards' && (
-          <div style={{ padding: '32px 20px', textAlign: 'center' }}>
-            <div className="section-title" style={{ marginBottom: 8 }}>Your Rewards</div>
-            <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>Complete quests to earn XP!</p>
-            <div style={{ marginTop: 20, background: 'var(--bg-soft)', borderRadius: 'var(--radius)', padding: 20, boxShadow: 'var(--shadow)' }}>
-              <div style={{ fontSize: 32, fontWeight: 800, color: 'var(--primary)' }}>{user?.xp || 0}</div>
-              <div className="xp-bar-wrap" style={{ marginTop: 12 }}>
-                <div className="xp-bar-fill" style={{ width: `${Math.min(((user?.xp || 0) % 500) / 5, 100)}%` }} />
-                <span className="xp-bar-label">{(user?.xp || 0) % 500}/500 XP</span>
-              </div>
-            </div>
-          </div>
+          <div className="rewards-section">
+
+  <h2 className="rewards-title">Current Level</h2>
+
+  <div className="reward-level-card">
+
+    <div className="reward-level-top">
+      <span>LEVEL 2</span>
+      <span>STREAK 🔥1</span>
+    </div>
+
+    <div className="xp-bar-wrap">
+      <div className="xp-bar-fill" style={{ width: '84%' }} />
+      <span className="xp-bar-label">422/500 XP</span>
+    </div>
+
+  </div>
+
+  <div className="earned-rewards">
+
+    <div className="reward-card">
+      <img src="/images/welcome.png" alt="" className="reward-icon" />
+
+      <div className="reward-info">
+        <h3>Welcome!</h3>
+        <span className="reward-xp">100 XP</span>
+
+        <p>
+          Unlock your first travel badge.
+        </p>
+
+        <button className="share-btn">
+          Share
+        </button>
+      </div>
+    </div>
+
+    <div className="reward-card">
+      <img src="/images/explorer.png" alt="" className="reward-icon" />
+
+      <div className="reward-info">
+        <h3>Explorer Badge</h3>
+        <span className="reward-xp">250 XP</span>
+
+        <p>
+          Unlock 8 beginner tourist badges.
+        </p>
+
+        <button className="share-btn">
+          Share
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 className="upcoming-title">
+    Upcoming Rewards
+  </h3>
+
+  <div className="upcoming-list">
+
+    <div className="reward-card locked">
+      <img src="/images/photoframe.png" alt="" className="reward-icon" />
+
+      <div className="reward-info">
+        <h3>Photo Frame Pack</h3>
+        <span className="reward-xp">500 XP</span>
+
+        <p>
+          Receive exclusive Cebu-themed photo borders and stickers.
+        </p>
+      </div>
+    </div>
+
+    <div className="reward-card locked">
+      <img src="/images/camera effects.png" alt="" className="reward-icon" />
+
+      <div className="reward-info">
+        <h3>Camera Effects</h3>
+        <span className="reward-xp">750 XP</span>
+
+        <p>
+          Gain access to travel-themed photo filters.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
         )}
 
         {tab === 'explore' && (

@@ -13,6 +13,7 @@ export default function Profile({ user, onLogout }) {
   const [avatarPreview, setAvatarPreview] = useState(user?.avatarUrl || '')
   const navigate = useNavigate()
 
+  
   useEffect(() => {
     axios.get('/api/profile/api')
       .then(res => setSubmissions(res.data.submissions || []))
@@ -87,7 +88,9 @@ export default function Profile({ user, onLogout }) {
               <div className="bio-bubble">so fulfilled!</div>
               <span className="name-badge">{user?.displayName}</span>
               <span className="tag-badge">he/him</span>
-              <span className="tag-badge">5 Followers</span>
+              <Link to="/followers" className="tag-badge">
+  5 Followers
+</Link>
             </div>
           </div>
           <div className="stats-row">
@@ -141,7 +144,7 @@ export default function Profile({ user, onLogout }) {
           </div>
         </div>
 
-        <button type="button" className="btn btn-outline btn-full" style={{ margin: '0 20px 24px' }} onClick={handleLogout}>
+        <button type="button" className="btn btn-outline btn-full" style={{ margin: '0 px 1px' }} onClick={handleLogout}>
           Logout
         </button>
       </div>

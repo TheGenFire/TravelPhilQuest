@@ -10,6 +10,7 @@ import SelectMedia from './pages/SelectMedia'
 import Upload from './pages/Upload'
 import NewUpload from './pages/NewUpload'
 import Complete from './pages/Complete'
+import Followers from './Followers'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -57,6 +58,7 @@ function App() {
             <Route path="/quests" element={<Quests user={user} />} />
             <Route path="/profile" element={<Profile user={user} onLogout={handleLogout} />} />
             <Route path="/quests/:questId/map" element={<Map />} />
+            <Route path="/followers" element={<Followers />} />
             <Route path="/quests/:questId/select-media" element={<SelectMedia />} />
             <Route path="/quests/:questId/upload" element={<Upload />} />
             <Route path="/quests/:questId/new-upload" element={<NewUpload />} />

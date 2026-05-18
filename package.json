@@ -1,0 +1,27 @@
+{
+  "name": "love-the-philippines-quest",
+  "version": "1.0.0",
+  "description": "Quest system for Love the Philippines tourism app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "build": "npm --prefix client run build",
+    "server:dev": "nodemon server.js",
+    "client:dev": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1",
+    "express-session": "^1.17.3",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "connect-mongo": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  }
+}

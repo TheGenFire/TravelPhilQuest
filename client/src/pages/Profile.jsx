@@ -13,7 +13,7 @@ export default function Profile({ user, onLogout }) {
   const [avatarPreview, setAvatarPreview] = useState(user?.avatarUrl || '')
   const navigate = useNavigate()
 
-  
+
   useEffect(() => {
     axios.get('/api/profile/api')
       .then(res => setSubmissions(res.data.submissions || []))
@@ -65,7 +65,6 @@ export default function Profile({ user, onLogout }) {
       <div className="profile-cover-wrap">
         <img src={COVER} alt="Cover" onError={(e) => { e.target.style.display = 'none' }} />
         <div className="cover-fallback" />
-        <div className="profile-cover-curve" />
         <Link to="/quests" className="back-btn white" style={{ position: 'absolute', top: 48, left: 16, zIndex: 5 }}>←</Link>
       </div>
 
@@ -85,12 +84,11 @@ export default function Profile({ user, onLogout }) {
               )}
             </div>
             <div style={{ flex: 1 }}>
-              <div className="bio-bubble">so fulfilled!</div>
               <span className="name-badge">{user?.displayName}</span>
               <span className="tag-badge">he/him</span>
               <Link to="/followers" className="tag-badge">
-  5 Followers
-</Link>
+                5 Followers
+              </Link>
             </div>
           </div>
           <div className="stats-row">
@@ -144,7 +142,7 @@ export default function Profile({ user, onLogout }) {
           </div>
         </div>
 
-        <button type="button" className="btn btn-outline btn-full" style={{ margin: '0 px 1px' }} onClick={handleLogout}>
+        <button type="button" className="btn btn-outline" style={{ display: 'block', margin: '0 auto' }} onClick={handleLogout}>
           Logout
         </button>
       </div>

@@ -11,7 +11,6 @@ const userSchema = new mongoose.Schema({
   xp: { type: Number, default: 0 },
   streak: { type: Number, default: 0 },
   followers: { type: Number, default: 0 },
-  bio: { type: String, default: 'so fulfilled!' },
   avatarUrl: { type: String, default: '' },
   completedQuests: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Quest' }],
   createdAt: { type: Date, default: Date.now }

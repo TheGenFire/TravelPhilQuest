@@ -18,9 +18,17 @@ function ProgressPill({ pct }) {
 
 function QuestCard({ quest, isCompleted, weekly, onClick }) {
   const pct = isCompleted ? 100 : 0
+  const isImagePath = quest.badgeIcon && (quest.badgeIcon.startsWith('/') || quest.badgeIcon.startsWith('http'))
+  
   return (
     <div className={`quest-card fade-up${isCompleted ? ' completed-stamp' : ''}`} onClick={onClick} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && onClick()}>
-      <div className={`quest-badge${weekly ? ' weekly' : ''}`}>{quest.badgeIcon || '🗺️'}</div>
+      <div className={`quest-badge${weekly ? ' weekly' : ''}`}>
+        {isImagePath ? (
+          <img src={quest.badgeIcon} alt="badge" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        ) : (
+          quest.badgeIcon || '🗺️'
+        )}
+      </div>
       <div className="quest-info">
         <div className={`quest-title${weekly ? '' : ' sans'}`}>{quest.title}</div>
         <div className="quest-location">{quest.location}</div>

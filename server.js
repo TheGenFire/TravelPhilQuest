@@ -46,7 +46,7 @@ async function seedQuests() {
         type: 'daily',
         xp: 20,
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Colon_Street_Cebu.jpg/1200px-Colon_Street_Cebu.jpg',
-        badgeIcon: '🎵',
+        badgeIcon: '/images/Rhythm_Of_Cebu.jpg',
         coordinates: { lat: 10.2969, lng: 123.8997 }
       },
       {
@@ -56,7 +56,7 @@ async function seedQuests() {
         type: 'daily',
         xp: 20,
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Colon_Street_Cebu.jpg/1200px-Colon_Street_Cebu.jpg',
-        badgeIcon: '🛒',
+        badgeIcon: '/images/Carbon_Rush.jpg',
         coordinates: { lat: 10.2950, lng: 123.8980 }
       },
       // Weekly Quests
@@ -67,7 +67,7 @@ async function seedQuests() {
         type: 'weekly',
         xp: 50,
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Plaza_Independencia_Cebu.jpg/1200px-Plaza_Independencia_Cebu.jpg',
-        badgeIcon: '🏛️',
+        badgeIcon: '/images/Freedom_Frame.jpg',
         coordinates: { lat: 10.2935, lng: 123.9029 },
         destination: { name: 'Plaza Independencia', address: '7WV4+73C, Cebu City' }
       },
@@ -78,7 +78,7 @@ async function seedQuests() {
         type: 'weekly',
         xp: 50,
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Fort_San_Pedro_Cebu.jpg/1200px-Fort_San_Pedro_Cebu.jpg',
-        badgeIcon: '🏰',
+        badgeIcon: '/images/Fort_Defender.jpg',
         coordinates: { lat: 10.2912, lng: 123.9038 },
         destination: { name: 'Fort San Pedro', address: 'A. Pigafetta St, Cebu City' }
       }

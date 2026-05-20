@@ -956,7 +956,7 @@ body {
   font-weight: 700;
   margin-top: 4px;
 }
-.auth-card {
+.auth-card { /*input*/
   flex: 1;
   background: #fff;
   border-radius: 28px 28px 0 0;

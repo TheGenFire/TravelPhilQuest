@@ -1,16 +1,11 @@
 import { Link } from 'react-router-dom'
-
-const Icon = ({ children }) => (
-  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24" strokeWidth="1.75">
-    {children}
-  </svg>
-)
+import HomeIcon from '../assets/Nav_Icons/Home.svg?react'
 
 export default function BottomNav({ active }) {
   return (
     <nav className="bottom-nav">
       <Link to="/quests" className={`nav-item ${active === 'home' || active === 'quests' ? 'active' : ''}`} aria-label="Home">
-        <img src="/images/Nav_Icons/Home.svg" alt="Home" />
+        <HomeIcon className="nav-icon" />
       </Link>
       <Link to="/quests" className="nav-item" aria-label="Search">
         <img src="/images/Nav_Icons/Search.svg" alt="Search" />

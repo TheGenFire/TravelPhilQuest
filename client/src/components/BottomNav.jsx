@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
-import HomeIcon from '../assets/Nav_Icons/Home.svg?react'
 
 export default function BottomNav({ active }) {
   return (
     <nav className="bottom-nav">
       <Link to="/quests" className={`nav-item ${active === 'home' || active === 'quests' ? 'active' : ''}`} aria-label="Home">
-        <HomeIcon className="nav-icon" />
+        <img src="/images/Nav_Icons/Home.svg" alt="Home" />
       </Link>
       <Link to="/quests" className="nav-item" aria-label="Search">
         <img src="/images/Nav_Icons/Search.svg" alt="Search" />
